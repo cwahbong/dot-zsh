@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 if [ -n "$ZDOTDIR" ]; then
 	SCRIPTPATH=$ZDOTDIR
 else
@@ -12,7 +19,7 @@ ZSHRC_PATH=$(dirname "$ZSHRC")
 ZSH_CUSTOM=$ZSHRC_PATH/custom
 
 # Set name of the theme to load.
-ZSH_THEME="avit-cw"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 CASE_SENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
@@ -53,3 +60,6 @@ DIR_COLORS_FILE=$HOME/.dir_colors
 if [ -z "$TMUX" ]; then
 	export TERM="xterm-256color"
 fi
+
+# To customize prompt, run `p10k configure` or edit p10k.zsh.
+source $ZSHRC_PATH/p10k.zsh
