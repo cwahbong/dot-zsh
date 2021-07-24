@@ -25,7 +25,7 @@ SAVEHIST=10000
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=()
+plugins=(fzf)
 
 # User configuration
 # export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
@@ -40,7 +40,6 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 unsetopt beep
-bindkey -v
 
 # Our dot file manager: https://github.com/ellipsis/ellipsis
 ELLIPSIS_INIT=~/.ellipsis/init.sh
