@@ -43,7 +43,8 @@ unsetopt beep
 bindkey -v
 
 # Overwrite theme ls colors
-eval $(dircolors $HOME/.dir_colors)
+DIR_COLORS_FILE=$HOME/.dir_colors
+[[ ! -f "$DIR_COLORS_FILE" ]] || eval $(dircolors $HOME/.dir_colors)
 
 # set term
 if [ -z "$TMUX" ]; then
