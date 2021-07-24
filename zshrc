@@ -42,6 +42,10 @@ source $ZSH/oh-my-zsh.sh
 unsetopt beep
 bindkey -v
 
+# Our dot file manager: https://github.com/ellipsis/ellipsis
+ELLIPSIS_INIT=~/.ellipsis/init.sh
+[[ ! -f "$ELLIPSIS_INIT" ]] || source "$ELLIPSIS_INIT"
+
 # Overwrite theme ls colors
 DIR_COLORS_FILE=$HOME/.dir_colors
 [[ ! -f "$DIR_COLORS_FILE" ]] || eval $(dircolors $HOME/.dir_colors)
