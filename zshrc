@@ -36,7 +36,11 @@ plugins=(fzf)
 
 # User configuration
 # export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-export EDITOR='vim'
+if [[ "$TERM_PROGRAM" == "vscode" ]]; then
+    export EDITOR='code --wait'
+else
+    export EDITOR='vim'
+fi
 
 source $ZSH/oh-my-zsh.sh
 
