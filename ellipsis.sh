@@ -2,7 +2,6 @@
 
 pkg.install() {
   git.clone https://github.com/robbyrussell/oh-my-zsh
-  git.clone https://github.com/romkatv/powerlevel10k.git custom/powerlevel10k
 }
 
 pkg.link() {
